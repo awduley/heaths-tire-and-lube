@@ -1,0 +1,328 @@
+<!-- <?php 
+
+   $result = "";
+   if(isset($_POST['submit'])) {
+     require 'PHPMailerAutoload.php';
+     $mail = new PHPMailer;
+
+     $mail->Host = 'smtp.gmail.com';
+     $mail->Port = 587;
+     $mail->SMTPAuth = true;
+     $mail->SMTPSecure = 'tls';
+     $mail->Username = $_POST['email'];
+     //$mail->Password = 12345;
+
+     $mail->setFrom($_POST['email'], $_POST['name']);
+     $mail->addAddress('duleyalaska@gmail.com'); 
+     $mail->addReplyTo($_POST['email'], $_POST['name']);
+
+    $mail->isHTML(true);
+    $mail->Subject = 'Form Submission: '.$_POST['subject'];
+    $mail->Body = '<h1 align=center>Name: '.$_POST['name'].'<br>Email: '.$_POST['email'].'<br>Message: '.$_POST['message'].'</h1>';
+
+    if(!$mail->send()) {
+      $result = "Something went wrong. Please try again.";
+    } else {
+      $result = "Thanks ".$_POST['name']." for contacting us. We'll get back to you soon!";
+    }
+   }
+
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a38893edb6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" defer=""></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?tracking=1&thirdparty=1&always=1&noGeoIp=1&showNoConsent=1&showPolicyLink=1&privacyPage=https%3A%2F%2Fcrookedfallstudios.com%2Fdist%2Fheaths-tire-and-lube%2Fcookie-policy.html" defer=""></script>
+    <script src="/scripts.bcf3243b.js" defer=""></script>
+    <title>Heath's Tire &amp; Lube</title>
+  <link rel="stylesheet" href="/scripts.bcf3243b.css"></head>
+  <body>
+
+<!-- Main Wrapper For Bottom Line Start -->
+<main id="main">
+
+  <!-- Start Navbar -->
+  <nav id="navbar">
+    <div class="nav-section">
+      <div class="nav-section__ul-list">
+        <ul class="nav-section__nav-items">
+          <li class="nav-section__nav-item">
+            <a href="#about">About Us</a>
+          </li>
+          <li class="nav-section__nav-item">
+            <a href="#services">Services</a>
+          </li>
+          <li class="nav-section__nav-item">
+            <a href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <a class="nav-section__phone-number" href="tel:+5402963008">(540) 296-3008</a>
+      <a href="https://www.facebook.com/heathstireandlube/" target="_blank"><p><i class="nav-section__social fab fa-facebook-square fa-2x"></i></p></a>
+      <a href="#footer"><img class="nav-section__icon-marker" src="/icon-marker.6bc11979.png" alt="Icon marker"></a>
+      <div class="nav-section__hamburger-btn">
+        <div class="nav-section__line nav-section__line--line1"></div>
+        <div class="nav-section__line nav-section__line--line2"></div>
+        <div class="nav-section__line nav-section__line--line3"></div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+      <!-- Start Hero Section -->
+      <section id="hero-section">
+        <div class="hero-section__hero-img">
+          <h1>Welcome to Heath's Tire &amp; Lube</h1>
+        </div>
+      </section>
+      <!-- End Hero Section -->
+
+      <!-- Start About Us Section -->
+      <section id="about">
+        <div class="about-section__about-info">
+          <h2>About Us</h2>
+          <div class="about-section__about-text">
+            <p>
+              We are not just a tire and lube shop. Here we like to take on
+              challenges, test our knowledge, and make you a customer for life.
+              You can believe us when we tell you what is going on with your car
+              and how we can fix it for you.
+            </p>
+          </div>
+          <div class="about-section__about-block">
+            <div class="about-section__about-img about-section__about-img--img1">
+              <img srcset="/mechanic1-sm.fc87f19b.jpg  576w,/mechanic1-md.e1e5ef05.jpg 1200w,/mechanic1-lg.36f21a40.jpg 1920w" alt="Mechanic" class="img1">
+              <div class="about-section__about-img-info">
+                <h3>Experienced Mechanics</h3>
+                <p>
+                  The mechanics at our shop are dedicated to providing
+                  high-quality repairs to keep you safe and happy.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="about-section__about-block">
+            <div class="about-section__about-img about-section__about-img--img2">
+              <img srcset="/mechanic2-sm.120becb4.jpg  576w,/mechanic2-md.9c227a7d.jpg 1200w,/mechanic2-lg.c8656e31.jpg 1920w" alt="Mechanic" class="img2">
+              <div class="about-section__about-img-info">
+                <h3>We Have You Covered</h3>
+                <p>
+                  Whether you're coming in for a routine inspection or a repair
+                  service, we promise that you will be completely satisfied with
+                  our work.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="about-section__about-block">
+            <div class="about-section__about-img about-section__about-img--img3">
+              <img srcset="/mechanic3-sm.9ccc62ae.jpg  576w,/mechanic3-md.32278f2f.jpg 1200w,/mechanic3-lg.b3435766.jpg 1920w" alt="Mechanic" class="img3">
+              <div class="about-section__about-img-info">
+                <h3>Our Quality Promise</h3>
+                <p>
+                  We're committed to providing a stress-free experience to both
+                  new and returning customers. Our shop only uses parts from
+                  reputable brands to ensure that your vehicle is always ready
+                  to drive.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Us Section -->
+      <hr>
+      <!-- Start Services Section -->
+      <section id="services">
+        <h2>Services &amp; Prices</h2>
+        <div class="services-section__services-area">
+          <h3>Routine Service</h3>
+          <div class="services-section__service-area">
+            <div class="services-section__service-lg-left">
+              <div class="services-section__service">
+                <h3>Tire Rotation, Repair, &amp; Disposal</h3>
+                <p>Rotation fee is waived upon purchase of new tires.</p>
+                <p>
+                  Visit Continental Tire and see why we recommend this brand.
+                </p>
+                <span class="services-section__left-arrow">&Gg;</span><a href="https://www.continentaltire.com/" target="_blank">Continental Tire</a><span class="services-section__right-arrow">&Ll;</span>
+                <div class="services-section__prices">
+                  <h4>Rotate tires &#36;20.00</h4>
+                  <h4>Rotate &amp; balance &#36;30.00</h4>
+                  <h4>Patch tire &#36;25.00</h4>
+                  <h4>Plug tire &#36;10.00</h4>
+                  <h4>Tire disposal &#36;4.00</h4>
+                  <h4>Tire disposal plus size tires &#36;7.00</h4>
+                  <h4>Value stem &#36;2.50</h4>
+                </div>
+              </div>
+              <div class="services-section__service">
+                <h3>Mount &amp; Balance</h3>
+                <div class="services-section__prices">
+                  <ul>
+                    <li>Mount &amp; balance - S &#36;15.00</li>
+                    <li>Mount &amp; balance - C &#36;20.00</li>
+                    <li>Balance - beads &#36;1.00 per OZ</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services-section__service">
+                <h3>Oil</h3>
+                <div class="services-section__prices">
+                  <ul>
+                    <li>Mobil 1 &#36;7.95</li>
+                    <li>Full synthetic &#36;5.95</li>
+                    <li>Blend &#36;4.95</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services-section__service">
+                <h3>Alignment</h3>
+                <p>Standard</p>
+                <div class="services-section__prices">
+                  <h4>Alignment &#36;89.99</h4>
+                </div>
+              </div>
+              <div class="services-section__service">
+                <h3>VA State Inspection (COMING SOON)</h3>
+              </div>
+            </div>
+
+            <div class="services-section__service-lg-right">
+              <hr class="hr-none">
+              <div class="services-section__service">
+                <h3>Oil Change</h3>
+                <p>We offer both synthetic and conventional motor oil.</p>
+                <div class="services-section__prices">
+                  <h4>Signature &#36;39.99</h4>
+                  <ul>
+                    <li>5 Quarts synthetic blend</li>
+                  </ul>
+                  <h4>Premier &#36;59.99</h4>
+                  <ul>
+                    <li>5 Quarts synthetic blend</li>
+                    <li>Fluids topped off</li>
+                    <li>Tire rotation</li>
+                    <li>Courtesy vehicle inspection</li>
+                  </ul>
+                  <h4>Premium &#36;69.99</h4>
+                  <ul>
+                    <li>5 Quarts full synthetic</li>
+                    <li>Fluids topped off</li>
+                    <li>Tire rotation</li>
+                    <li>Courtesy vehicle inspection</li>
+                  </ul>
+                  <h4>Platinum &#36;89.99</h4>
+                  <ul>
+                    <li>Mobil 1 synthetic oil</li>
+                    <li>Fluids topped off</li>
+                    <li>Tire rotation</li>
+                    <li>Courtesy vehicle inspection</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="services-section__service-lg-bottom">
+              <hr>
+              <div class="services-section__service">
+                <h3>Repairs</h3>
+                <p>We use Snap on tools, and Mobil 1 Full Synthetic Oil</p>
+              </div>
+              <div class="services-section__service">
+                <h3>Brake Pads</h3>
+                <p></p>
+              </div>
+              <div class="services-section__service">
+                <h3>Battery Replacement</h3>
+                <p>We recommend Interstate Batteries.</p>
+              </div>
+              <div class="services-section__service">
+                <h3>Service and Repair all Vehicles</h3>
+                <p>Shop rate - &#36;75.00 per hour.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Services Section -->
+
+      <!-- Start Contact Us, Address, and Map Section -->
+      <section id="contact">
+        <div class="contact-section__contact-area">
+          <h2>Contact Us</h2>
+          <form class="contact-section__contact-form" action="" method="post">
+            <div class="result"></div>
+            <fieldset>
+              <p>
+                Simply fill out the form below, and let us know what is going on
+                with your vehicle. We will get back to you as soon as possible
+                with a quote.
+              </p>
+              <div class="contact-section__form-box">
+                <input type="text" id="input-name" class="" name="name" placeholder="Your Name" tabindex="1">
+              </div>
+              <div class="contact-section__form-box">
+                <input type="email" id="input-email" placeholder="Your Email" name="email" tabindex="1">
+              </div>
+              <div class="contact-section__form-box">
+                <input type="text" id="input-subject" class="" name="subject" placeholder="Subject" tabindex="1">
+              </div>
+              <div class="contact-section__form-box">
+                <textarea type="text" id="input-message" rows="5" cols="30" placeholder="How can we help?" name="message" tabindex="1"></textarea>
+              </div>
+              <div class="contact-section__form-buttons">
+                <div class="contact-section__button contact-section__button--cancel-button">Cancel</div>
+                <button class="contact-section__button contact-section__button--send-button" name="submit" type="submit">
+                  Submit
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <hr>
+
+        <!-- Start Address Section-->
+        <div id="address">
+          <div class="address-section__address-area">
+            <h2>Address</h2>
+            <h3>Heath's Tire &amp; Lube</h3>
+            <p>12334 Moneta Road, Moneta Virginia, 24121</p>
+            <p>
+              <span>Phone: </span><a class="address-section__phone-number" href="tel:+5402963008">(540) 296-3008</a>
+            </p>
+            <h3>Hours</h3>
+            <p>Mon-Fri 8 A.M. - 5 P.M.</p>
+            <p>Saturday 8 A.M. - 2 P.M.</p>
+            <p>
+              <i class="social fab fa-facebook-square fa-2x"></i><a href="https://www.facebook.com/heathstireandlube/" target="_blank">Check us out on Facebook!</a>
+            </p>
+          </div>
+          <!-- End Address Section-->
+        </div>
+      </section>
+      <!-- End Contact Us, Address, and Map Section -->
+    </main>
+    <!-- Main Wrapper For Bottom Line End -->
+
+    <!-- Start Footer Section -->
+    <section id="footer">
+      <div class="footer-section__footer-items">
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.326160081453!2d-79.60792049999999!3d37.1924818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884d394819e44357%3A0xff8ede4b554ba4d5!2sHeath&#39;s%20Tire%20and%20Lube!5e0!3m2!1sen!2sus!4v1582905742606!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        <p>
+          Copyright &copy; <span class="year"></span> Heath's Tire &amp; Lube |
+          All Rights Reserved
+        </p>
+      </div>
+    </section>
+
+    <!-- End Footer Section -->
+  </body>
+</html>
